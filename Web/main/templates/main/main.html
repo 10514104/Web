@@ -7,5 +7,7 @@
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
   </head>
   <body>
+  <p><a class="btn" href="{% url 'product:product' %}">新增產品</a></p>
+  {% include 'main/messages.html' %}
   </body>
 </html>
