@@ -7,7 +7,38 @@
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
   </head>
   <body>
-  <p><a class="btn" href="{% url 'product:product' %}">新增產品</a></p>
+  <div id = "d1">
+    <ul>
+      <li id = "l1"><a href="{% url 'main:main' %}" id="a1">
+      <img src="../../static/main/img/GLEN0.jpg" id=img0 alt="GLEN"></a></li>
+      <li id = "l2"><p id="p2"><a href="{% url 'main:main' %}" id="a2">格蘭哥尼販賣小舖</a></p></li>
+      <li id = "l3"><p id="p3"><a href="#" id="a3">購物車/結帳</a></p></li>
+      <li id = "l4"><p id="p4"><a href="{% url 'product:product' %}" id="a4">新增產品</a></p></li>
+    </ul>
+  </div>
+  
+  <div id = "d2">
+  <ul>
+    {% for product in products %}
+      <li id=""><a href="#">{{product.name}}</a></li>
+    {% endfor %}
+    <div style="clear: both;"></div>
+  </ul>
+  </div> 
+  
+  <div id = "d3">
+    <p id = "p1"><i>充滿著顯著又複雜的風味</i></p>
+    <p id = "p2">格蘭哥尼 10 年雪莉桶威士忌的巴西堅果香和軟橡木的香氣；
+      格蘭哥尼 18 年雪莉新<br>桶威士忌那極好的平衡；
+      或又是那擁有獨特的聖誕節蛋糕香味的格蘭哥尼 21 年雪<br>莉桶威士忌 。
+      格蘭哥尼威士忌系列充滿著顯著又複雜的風味。
+    </p>
+  </div>
+  
+  
+  <div id = "d4">4<br><br><br>4<br><br>
+  </div>
+  
   {% include 'main/messages.html' %}
   </body>
 </html>
