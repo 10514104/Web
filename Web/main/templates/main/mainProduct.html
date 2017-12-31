@@ -1,0 +1,75 @@
+<!doctype html>
+{% load staticfiles %}
+<html>
+  <head>
+    <title>{{ product.name }}</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'main/css/mainProduct.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+  </head>
+  <body>
+    {% include 'main/menu.html' %}
+    
+    <div id = "d3">
+      <p id = "p1"><i>{{ product.title }}</i></p>
+      {{ product.Introduction|linebreaks }}
+      <br>
+      <hr>
+    </div>
+    
+    <div id= "d4">
+      <img id = "img1" src="../../../static/main/img/GLENX2.png" alt="GLEN">
+      <table id = "tab1">
+        <tr class = "tr1">
+          <td id="td1"  colspan="2">品飲紀錄</td>
+        </tr>
+        <tr class = "tr2">
+          <td class="td1">色澤</td>
+          <td class="td2">{{ product.colour }}</td>
+        </tr>
+        <tr class = "tr1">
+          <td class="td1">嗅覺</td>
+          <td class="td2">{{ product.smell }}</td>
+        </tr>
+        <tr class = "tr2">
+          <td class="td1">口感</td>
+          <td class="td2">{{ product.taste }}</td>
+        </tr>
+        <tr class = "tr1">
+          <td class="td1">餘韻</td>
+          <td class="td2">{{ product.After }}</td>
+        </tr>
+        <tr class = "tr2">
+          <td class="td1">威士忌橡木桶資訊</td>
+          <td class="td2">{{ product.cask|linebreaks }}</td>
+        </tr>
+       </table>
+       
+      <div id="dd">
+        <p id="p1">{{ product.name }}</p>
+        <P id="p2">NT${{ product.price }}</P>
+        <form method="post" action="#">
+          {% csrf_token %}
+          {{ productForm.price }}
+          <input class="btn" type="submit" value="加入購物車">
+        </form>
+      </div>
+      <div style="clear: both;"></div>
+      <hr>
+      
+      <div id = "d5">
+      <br>
+      <table>
+        <tr>
+          <td id="td1">"地利人和造就了這卓越的威士忌！"
+          <td id="td2" rowspan="2">
+          <img src="../../../static/main/img/GLENX1.png" alt="GLEN"></td>
+        </tr>
+        <tr>
+          <td id="td3">Stephanie McIntyre<br>酒窖管理員</td>
+        </tr>
+       </table><br><br>
+      </div>
+    </div>
+  </body>
+</html>

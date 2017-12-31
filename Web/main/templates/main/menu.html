@@ -1,0 +1,21 @@
+<div id = "d1">
+    <ul>
+      <li id = "l1"><a href="{% url 'main:main' %}" id="a1">
+      <img src="../../../static/main/img/GLEN0.jpg" id=img0 alt="GLEN"></a></li>
+      <li id = "l2"><a href="{% url 'main:main' %}" id="a2">格蘭哥尼販賣小舖</a></li>
+      <li id = "l3"><a href="#" id="a3">購物車/結帳</a></li>
+      <li id = "l4"><a href="{% url 'product:product' %}" id="a4">新增產品</a></li>
+    <div style="clear: both;"></div>
+    </ul>
+    <div style="clear: both;"></div>
+  </div>
+  
+  <div id = "d2">
+    <ul>
+      <li id="l0"></li>
+      {% for product in products %}
+        <li><a href="{% url 'main:mainProduct' product.id %}">{{product.name}}</a></li>
+      {% endfor %}
+      <div style="clear: both;"></div>
+    </ul>
+  </div> 

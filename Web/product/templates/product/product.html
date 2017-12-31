@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
   </head>
   <body>
+  {% include 'main/menu.html' %}
   <form method="post" action="{% url 'product:product' %}">
       {% csrf_token %}
       {{ productForm.as_p }}
-      <input type="submit" value="送出">
-      <a class="btn" href="{% url 'main:main' %}">取消</a>
+      <input class="btn" type="submit" value="新增">
     </form>
   </body>
 </html>
