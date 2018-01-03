@@ -1,8 +1,8 @@
 from django import forms
-from product.models import product
+from product.models import Product
 
 
-class productForm(forms.ModelForm):
+class ProductForm(forms.ModelForm):
     name = forms.CharField(label='標題')
     price = forms.IntegerField(label='價格')
     title = forms.CharField(label='產品標題',widget=forms.Textarea)#產品標題
@@ -13,8 +13,11 @@ class productForm(forms.ModelForm):
     taste = forms.CharField(label='口感',widget=forms.Textarea)#口感
     After = forms.CharField(label='餘韻',widget=forms.Textarea)#餘韻
     cask = forms.CharField(label='橡木桶資訊')#橡木桶資訊
-
     class Meta:
-        model = product
+        model = Product
         fields = ['name', 'price','title', 'Introduction',
                   'colour', 'price','smell', 'taste','After', 'cask']
+
+
+
+        

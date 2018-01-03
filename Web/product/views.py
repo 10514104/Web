@@ -1,9 +1,8 @@
 from django.shortcuts import render, redirect
 
-from product.models import product
+from product.models import Product
 from django.contrib import messages
-from product.forms import productForm
-
+from product.forms import ProductForm
 
 # Create your views here.
 
@@ -16,16 +15,16 @@ def product(request):
         3. Save the form to the model and redirect the user to the article page
     '''
     # TODO: finish the code
-    #products = product.objects.all()
-    #context = {'products':products}
+    products = Product.objects.all()
+    context = {'products':products}
     template = 'product/product.html'
     if request.method == 'GET':
-        return render(request,template, {'productForm':productForm()})
+        return render(request, template, {'productForm':ProductForm()})
     # POST
-    ProductForm = productForm(request.POST)
-    if not ProductForm.is_valid():
-        return render(request, template, {'productForm':ProductForm})
-    ProductForm.save()
+    productForm = ProductForm(request.POST)
+    if not productForm.is_valid():
+        return render(request, template, {'productForm':productForm})
+    productForm.save()
     messages.success(request, '產品已新增')
     return redirect('main:main')
 

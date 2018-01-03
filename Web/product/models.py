@@ -2,7 +2,7 @@ from django.db import models
 
 
 
-class product(models.Model):
+class Product(models.Model):
     #產品資料
     name = models.CharField(max_length=128, unique=True)#產品名稱
     price = models.IntegerField()#產品價格

@@ -8,17 +8,20 @@ html, body {
                                /*------d1------*/
 div#d1 {
   height:96px;
-  width:80%;
-  margin: 0 10%;
+  width:90%;
+  margin:0 10%;
+  /*border: thin solid green;*/
 }
 div#d1 ul {
   margin: 0;
   padding: 0;
   height:96px;
   width:100%;
+  /*border: thin solid blue;*/
 }
 
 div#d1 li {
+  /*border: thin solid red;*/
   display:block;
   height:100%;
   list-style: none;
@@ -34,23 +37,17 @@ div#d1 img{
   width:100%;
 }
 div#d1 li#l2{
-  height:96px;
-  width:60%;
+  width:50%;
   min-width:30em;
+  height:96px;
   text-align:center;
   padding:1.1em 0 0 0;
 }
 div#d1 li#l3{
-  width:12%;
+  width:20%;
   min-width:11em;
   text-align:right;
-  padding:5em 0 0 0;
-}
-div#d1 li#l4{
-  width:8%;
-  text-align:right;
-  min-width:9em;
-  padding:5em 0 0 0;
+  padding:2em 0 0 0;
 }
 div#d1 a{
   text-decoration: none;
@@ -60,7 +57,7 @@ div#d1 a#a2{
   font-size: 3.6em;
 }
 div#d1 a#a3,a#a4{
-  font-size:2em;
+  font-size:1.7em;
 }
  
 
@@ -81,7 +78,6 @@ div#d2 li {
 div#d2 li#l0{
   display:block;
   width:208px;
-  border: thin solid black;
   margin:0;
 }
 div#d2 a {

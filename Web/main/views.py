@@ -1,13 +1,13 @@
 from django.shortcuts import render, get_object_or_404
 
-from product.models import product
+from product.models import Product
 
 
 def main(request):
     '''
     Show 'Hello world!' in the main page
     '''
-    products = product.objects.all()
+    products = Product.objects.all()
     context = {'products':products}
     return render(request, 'main/main.html',context)
 
@@ -20,9 +20,9 @@ def mainProduct(request, productId):
         2. Render the articleRead template with the article instance and its
            associated comments
     '''
-    Product = get_object_or_404(product, id=productId)
-    products = product.objects.all()
-    context = {'product': Product,'products':products}
+    product = get_object_or_404(Product, id=productId)
+    products = Product.objects.all()
+    context = {'product': product,'products':products}
     return render(request, 'main/mainProduct.html', context)
 
 

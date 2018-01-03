@@ -4,14 +4,20 @@
   <head>
     <title>新增產品</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'main/css/product.css' %}">
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
   </head>
   <body>
-  {% include 'main/menu.html' %}
-  <form method="post" action="{% url 'product:product' %}">
-      {% csrf_token %}
-      {{ productForm.as_p }}
-      <input class="btn" type="submit" value="新增">
-    </form>
+    {% include 'main/menu.html' %}
+    <div id="d4">
+    <p id="pp">新增產品</p>
+      <form method="post" action="{% url 'product:product' %}">
+          {% csrf_token %}
+          {{ productForm.as_p }}
+          <input class="btn" type="submit" value="新增">
+      </form>
+      <br><br><br><br><br><br>
+    </div>
+    
   </body>
 </html>
