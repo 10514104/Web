@@ -16,3 +16,12 @@ class Product(models.Model):
     cask = models.TextField()#橡木桶資訊
     def __str__(self):
         return self.name
+    
+    
+class Shop(models.Model):
+    #產品資料
+    name = models.CharField(max_length=128, unique=True)#產品名稱
+    price = models.IntegerField()#產品價格
+    amount = models.IntegerField()#數量
+    def __str__(self):
+        return self.name

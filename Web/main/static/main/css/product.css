@@ -1,8 +1,46 @@
 div#d4{
-  padding:0 0 0 16%;
+  padding:0 25%;
   margin:0;
   border: thin solid #FFFFFF;
 }
 div#d4 p#pp{
   font-size:2em;
 }
+label{
+  font-size:1.5em;
+}
+input{
+  width:30em;
+  border-radius:5px;
+  padding:3px;
+}
+textarea{
+  width:30em;
+  height:4.5em;
+  border-radius:5px;
+}
+div#d4 table#tb2{
+  /*border: thin solid red;*/
+  width:100%;
+}
+div#d4 tr#tr11{
+  background-color:#c3c3c3;
+  font-size:2em;
+}
+div#d4 tr#tr11 td{
+  padding:0.5em 0;
+  text-align:center;
+  border-bottom: thin solid black;
+}
+div#d4 tr#tr22 td{
+  padding:0 2em;
+  background-color:#FFFFFF;
+  padding:0 28% 0 25%;
+  border-bottom: thin solid black;
+}
+div#d4 tr#tr33 td{
+  text-align:center;
+  background-color:#FFFFFF;
+  padding:0.5em 0;
+}
+

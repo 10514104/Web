@@ -16,10 +16,10 @@ def product(request):
     '''
     # TODO: finish the code
     products = Product.objects.all()
-    context = {'products':products}
+    context = {'products':products,'productForm':ProductForm()}
     template = 'product/product.html'
     if request.method == 'GET':
-        return render(request, template, {'productForm':ProductForm()})
+        return render(request,template,context)
     # POST
     productForm = ProductForm(request.POST)
     if not productForm.is_valid():

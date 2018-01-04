@@ -1,5 +1,5 @@
 from django import forms
-from product.models import Product
+from product.models import Product,Shop
 
 
 class ProductForm(forms.ModelForm):
@@ -12,11 +12,22 @@ class ProductForm(forms.ModelForm):
     smell = forms.CharField(label='嗅覺',widget=forms.Textarea)#嗅覺
     taste = forms.CharField(label='口感',widget=forms.Textarea)#口感
     After = forms.CharField(label='餘韻',widget=forms.Textarea)#餘韻
-    cask = forms.CharField(label='橡木桶資訊')#橡木桶資訊
+    cask = forms.CharField(label='橡木桶資訊',widget=forms.Textarea)#橡木桶資訊
     class Meta:
         model = Product
         fields = ['name', 'price','title', 'Introduction',
                   'colour', 'price','smell', 'taste','After', 'cask']
+        
+        
+        
+class ShopForm(forms.ModelForm):
+    amount = forms.IntegerField(label='數量')
+    name = forms.CharField(label='標題')
+    price = forms.IntegerField(label='價格')
+    class Meta:
+        model = Shop
+        fields = ['amount','name','price']
+
 
 
 

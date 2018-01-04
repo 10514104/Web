@@ -11,10 +11,23 @@
     {% include 'main/menu.html' %}
     <div id="d4">
     <p id="pp">新增產品</p>
-      <form method="post" action="{% url 'product:product' %}">
-          {% csrf_token %}
-          {{ productForm.as_p }}
-          <input class="btn" type="submit" value="新增">
+    <form method="post" action="{% url 'product:product' %}">
+      <table id="tb2">
+        <tr id="tr11">
+          <td>產品資料</td>
+        </tr>
+        <tr id="tr22">
+          <td>
+              {% csrf_token %}
+              {{ productForm.as_p }}
+          </td>
+        </tr>
+        <tr id="tr33">
+          <td>
+            <input class="btn" type="submit" value="新增">
+          </td>
+        </tr>
+      </table>
       </form>
       <br><br><br><br><br><br>
     </div>
