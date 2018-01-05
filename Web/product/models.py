@@ -25,3 +25,8 @@ class Shop(models.Model):
     amount = models.IntegerField()#數量
     def __str__(self):
         return self.name
+    
+    
+    
+    
+    

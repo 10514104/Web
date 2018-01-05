@@ -4,10 +4,95 @@
   <head>
     <title>購物車</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'main/css/shop.css' %}">
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
   </head>
   <body>
     {% include 'main/menu.html' %}
+    
+    <div id="d4">
+      <br>
+      <img id="shop" src="{% static 'main/img/shop0.png' %}"  alt="shop">
+      <br>
+      <table id="tab1">
+        <tr class="tr1">
+          <td colspan="4">購物車</td>
+        <tr>
+        <tr class="tr2">
+          <td>商品資料</td>
+          <td>單件價格</td>
+          <td>數量</td>
+          <td>小計</td>
+        </tr>
+        {% for shop in shops %}
+          <tr class="tr3">
+            <td>{{shop.name}}</td>
+            <td>{{shop.price}}</td>
+            <td>{{shop.amount}}</td>
+            <td>{{shop.amount}} * {{shop.price}}</td>
+          </tr>
+        {% endfor %}
+      </table>
+      <br><br>
+      
+      <table id="tab2">
+        <tr class="tr1">
+          <td>送貨及付款方式</td>
+        <tr>
+        <tr class="tr2">
+          <td>
+          <p>送貨方式</p>
+          <form method="post" action="{% url 'shop:checkout' %}">
+            {% csrf_token %}
+            <select id="Delivery" name="Delivery">
+                    <option value="黑貓宅急便">黑貓宅急便</option>
+                    <option value="中華郵政">中華郵政</option>
+                    <option value="新竹貨運">新竹貨運</option>
+            </select>
+          <p>將貨物送往指定位址，運費統一60。</p>
+          </td>
+        </tr>
+        <tr class="tr2">
+            <td>
+            <p>付款方式</p>
+            <select id="payment" name="payment">
+                    <option value="貨到付款">貨到付款</option>
+                    <option value="轉帳">轉帳</option>
+            </select>
+            <br><br><br>
+            </td>
+        </tr>
+      
+      </table>
+      
+      <table id="tab3">
+        <tr class="tr1">
+          <td colspan="2">訂單資訊</td>
+        <tr>
+        <tr class="tr2">
+          <td><p>小計</p></td>
+          <td><p>NT$????</p></td>
+        </tr>
+        <tr class="tr2">
+            <td><p>運費</p></td>
+            <td><p>NT$60</p></td>
+        </tr>
+        <tr class="tr2">
+          <td colspan="2"><hr></td>
+        <tr>
+        <tr class="tr2">
+            <td><p>合計</p></td>
+            <td><p>NT$????</p></td>
+        </tr>
+        <tr class="tr2">
+            <td colspan="2">
+            <input class="btn" type="submit" value="前往結帳">
+            </form>
+            </td>
+        </tr>
+      </table>
+      <br>
+    </div>
    
   </body>
 </html>

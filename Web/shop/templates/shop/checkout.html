@@ -1,0 +1,118 @@
+<!doctype html>
+{% load staticfiles %}
+<html>
+  <head>
+    <title>結帳</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'main/css/checkout.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+  </head>
+  <body>
+    {% include 'main/menu.html' %}
+    <div id="d4">
+      <br>
+        <img id="shop" src="{% static 'main/img/shop1.png' %}"  alt="shop">
+      <br>
+      
+      <table id="tab1">
+        <tr class="tr1">
+          <td colspan="4">購物車</td>
+        <tr>
+        <tr class="tr2">
+          <td>商品資料</td>
+          <td>單件價格</td>
+          <td>數量</td>
+          <td>小計</td>
+        </tr>
+        {% for shop in shops %}
+          <tr class="tr3">
+            <td>{{shop.name}}</td>
+            <td>{{shop.price}}</td>
+            <td>{{shop.amount}}</td>
+            <td>{{shop.amount}} * {{shop.price}}</td>
+          </tr>
+        {% endfor %}
+      </table>
+      
+      <br><br>
+      
+      <table id="tab2" class="tab2">
+        <tr class="tr11">
+          <td>顧客資料</td>
+        </tr>
+        <tr class="tr22">
+          <td>
+          <p>顧客名稱</p>
+          <input type="text" name=name>
+          <p>電子信箱</p>
+          <input type="email" name=name>
+          <p>電話號碼</p>
+          <input type="mobile" name=name>
+          <p>生日</p>
+          <input type="date" name=name>
+          <p>性別</p>
+          <select id="sex" name="sex">
+                    <option value="M">男</option>
+                    <option value="G">女</option>
+          </select>
+          </td>
+        </tr>
+      </table>
+      
+      <table id="tab3" class="tab2">
+        <tr class="tr11">
+          <td>送貨資料 (運費:NT$60)</td>
+        </tr>
+        <tr class="tr22">
+          <td>
+          <p>以選擇送貨方式:{{ Delivery }}</p>
+          <p>顧客名稱</p>
+          <input type="text" name=name>
+          <p>電子信箱</p>
+          <input type="email" name=name>
+          <p>電話號碼</p>
+          <input type="mobile" name=name>
+          <p>生日</p>
+          <input type="date" name=name>
+          <select id="sex" name="sex">
+                    <option value="M">男</option>
+                    <option value="G">女</option>
+          </select>
+          </td>
+        </tr>
+      </table>
+      
+      <br><br>
+      
+      <table id="tab4" class="tab2">
+        <tr class="tr11">
+          <td>訂單備註</td>
+        </tr>
+        <tr class="tr22">
+          <td>
+          <textarea rows=7 cols=20> ... </textarea>
+          </td>
+        </tr>
+      </table>
+      
+      <table id="tab5" class="tab2">
+        <tr class="tr11">
+          <td>付款資料</td>
+        </tr>
+        <tr class="tr22">
+          <td>
+          <strong>合計:NT$????</strong>
+          <p>已選擇的付款方式:{{ payment }}</p>
+          <br><br><br>
+          </td>
+        </tr>
+      </table>
+      
+      
+      
+    </div>
+    
+    <br>
+    
+  </body>
+</html>
