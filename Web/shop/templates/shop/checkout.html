@@ -34,7 +34,7 @@
         {% endfor %}
       </table>
       
-      <br><br>
+      <br><hr><br>
       
       <table id="tab2" class="tab2">
         <tr class="tr11">
@@ -64,21 +64,24 @@
           <td>送貨資料 (運費:NT$60)</td>
         </tr>
         <tr class="tr22">
-          <td>
-          <p>以選擇送貨方式:{{ Delivery }}</p>
-          <p>顧客名稱</p>
-          <input type="text" name=name>
-          <p>電子信箱</p>
-          <input type="email" name=name>
-          <p>電話號碼</p>
-          <input type="mobile" name=name>
-          <p>生日</p>
-          <input type="date" name=name>
-          <select id="sex" name="sex">
-                    <option value="M">男</option>
-                    <option value="G">女</option>
-          </select>
+          <td id="td2">
+          <form method="get" action="{% url 'shop:order' %}">
+            已選擇送貨方式：
+              <select id="Delivery" name="Delivery">
+                <option value={{ Delivery }}>{{ Delivery }}</option>
+              </select>
+            
+              {% csrf_token %}
+              <p>收件人名稱</p>
+              <input type="text" name="name">
+              <p id="p1">請填入收件人真實姓名，以確保順利收件。</p>
+              <p>收件人電話號碼</p>
+              <input type="text" name="phone">
+              <p>地址</p>
+              <input type="text" name="address">
+            <br><br><br><br><br>
           </td>
+          
         </tr>
       </table>
       
@@ -90,7 +93,7 @@
         </tr>
         <tr class="tr22">
           <td>
-          <textarea rows=7 cols=20> ... </textarea>
+          <textarea rows=7 cols=20 name="remark"></textarea>
           </td>
         </tr>
       </table>
@@ -102,13 +105,33 @@
         <tr class="tr22">
           <td>
           <strong>合計:NT$????</strong>
-          <p>已選擇的付款方式:{{ payment }}</p>
-          <br><br><br>
+          <p>已選擇付款方式：
+            <select id="payment" name="payment">
+              <option value={{ payment }}>{{ payment }}</option>
+            </select>
+          </p>
+          <br><br>
           </td>
         </tr>
       </table>
       
+      <br><br>
       
+      <div id="dd5">
+      <table>
+      <tr>
+      <td id="td1">
+        <a class="btn" id="btn1" href="{% url 'shop:shop' %}" >返回購物車</a>
+      </td>
+      <td id="td2">
+        <input class="btn" type="submit" value="提交訂單">
+        </form>
+      </td>
+      </tr>
+      </table>
+        
+        
+      </div>
       
     </div>
     

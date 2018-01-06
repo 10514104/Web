@@ -132,21 +132,21 @@ div#d4 li {
   margin:0;
   float: left;
 }
-div#d4 a {
+div#d4 a.a1 {
   display:block;
   height:100%;
   width:100%;
   text-decoration: none;
   margin:2px 0 0 0;
 }
-div#d4 a img{
+div#d4 a.a1 img{
   width:100%;
 }
-div#d4 a img:hover{
+div#d4 a.a1 img:hover{
   display:block;
   box-shadow: inset 0 0 10px #ffffff;
 }
-div#d4 a:hover {
+div#d4 a.a1:hover {
   margin:0 0 0 0;
 }
 
@@ -181,7 +181,9 @@ div#d5 td#td3 {
 }
 
 .btn{
-  font-size:1.7em;
+  box-shadow:none;
+  border: thin solid black;
+  font-size:2em;
   width:10em !important;
   text-align:center !important;
   border-radius: 5px;

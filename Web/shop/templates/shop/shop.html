@@ -33,7 +33,7 @@
           </tr>
         {% endfor %}
       </table>
-      <br><br>
+      <br><hr><br>
       
       <table id="tab2">
         <tr class="tr1">
@@ -42,7 +42,7 @@
         <tr class="tr2">
           <td>
           <p>送貨方式</p>
-          <form method="post" action="{% url 'shop:checkout' %}">
+          <form method="get" action="{% url 'shop:checkout' %}">
             {% csrf_token %}
             <select id="Delivery" name="Delivery">
                     <option value="黑貓宅急便">黑貓宅急便</option>

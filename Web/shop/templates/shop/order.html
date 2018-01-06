@@ -1,0 +1,74 @@
+<!doctype html>
+{% load staticfiles %}
+<html>
+  <head>
+    <title>確認訂單</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'main/css/order.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+  </head>
+  <body>
+    {% include 'main/menu.html' %}
+    <div id="d4">
+      <br>
+        <img id="shop" src="{% static 'main/img/shop2.png' %}"  alt="shop">
+      <br>
+      
+      <table id="tab1">
+        <tr class="tr1">
+          <td colspan="4">購物車</td>
+        <tr>
+        <tr class="tr2">
+          <td>商品資料</td>
+          <td>單件價格</td>
+          <td>數量</td>
+          <td>小計</td>
+        </tr>
+        {% for shop in shops %}
+          <tr class="tr3">
+            <td>{{shop.name}}</td>
+            <td>{{shop.price}}</td>
+            <td>{{shop.amount}}</td>
+            <td>{{shop.amount}} * {{shop.price}}</td>
+          </tr>
+        {% endfor %}
+      </table>
+      
+      <br><br>
+      
+      <table id="tab2">
+        <tr class="tr11"><td class="td11">收件人資料</td></tr>
+        <tr class="tr12"><td class="td22">收件人名稱：{{ name }}</td></tr>
+        <tr class="tr12"><td class="td22">收件人電話號碼：{{ phone }}</td></tr>
+        <tr class="tr12"><td class="td22">地址：{{ address }}</td></tr>
+        <tr class="tr12"><td class="td22">送貨方式：{{ Delivery }}</td></tr>
+        <tr class="tr12"><td class="td22" id="td0">付款方式：{{ payment }}</td></tr>
+      </table>
+      
+      <table id="tab3">
+        <tr class="tr11"><td class="td11">訂單備註</td></tr>
+        <tr class="tr12">
+        <td class="td22">
+        <textarea rows=7 cols=20 name="remark">{{ remark }}</textarea>
+        </td></tr>
+      </table>
+      
+      <br><br>
+      
+       <table id="tab44">
+          <tr>
+            <td id="td1">
+              <a class="btn" id="btn1" href="{% url 'shop:checkout' %}" >返回結帳</a>
+            </td>
+            <td id="td2">
+              <a class="btn fin" id="btn1" href="{% url 'main:main' %}" >確認提交</a>
+            </td>
+          </tr>
+       </table>
+       
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src={% static 'main/js/fin.js' %}></script>
+  </body>
+</html>
