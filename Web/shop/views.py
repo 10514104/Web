@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 
 from product.models import Product
 from product.models import Shop
@@ -8,7 +8,19 @@ from product.models import Shop
 def shop(request):
     products = Product.objects.all()
     shops = Shop.objects.all()
-    context = {'products':products,'shops':shops}
+    sub = []
+    sub1 = 0
+    for x in shops:
+        a=x.price * x.amount
+        sub1+=a
+        sub.append(a)
+        print(a)
+    print(sub)
+    print(sub1)
+    sub2=sub1+60
+    
+    context = {'products':products,'shops':shops,
+               'sub':sub,'sub1':sub1,'sub2':sub2}
     return render(request, 'shop/shop.html',context)
 
 
@@ -18,8 +30,18 @@ def checkout(request):
     payment = request.GET.get('payment')
     products = Product.objects.all()
     shops = Shop.objects.all()
+    sub = [0]
+    sub1 = 0
+    for x in shops:
+        a=x.price * x.amount
+        sub.append(a)
+    print(sub)
+    for x in sub:
+        sub1+=x
+    sub2=sub1+60
     context = {'products':products,'shops':shops,
-               'payment':payment,'Delivery':Delivery,}
+               'payment':payment,'Delivery':Delivery,
+               'sub':sub,'sub1':sub1,'sub2':sub2}
     return render(request, 'shop/checkout.html',context)
 
 
@@ -33,10 +55,33 @@ def order(request):
     payment = request.GET.get('payment')
     products = Product.objects.all()
     shops = Shop.objects.all()
-    print(Delivery,payment)
+    sub = [0]
+    sub1 = 0
+    for x in shops:
+        a=x.price * x.amount
+        sub.append(a)
+    print(sub)
+    for x in sub:
+        sub1+=x
+    sub2=sub1+60
     context = {'products':products,'shops':shops,'name':name
                ,'phone':phone,'address':address,'remark':remark
-               ,'Delivery':Delivery,'payment':payment}
+               ,'Delivery':Delivery,'payment':payment,
+               'sub':sub,'sub1':sub1,'sub2':sub2}
     return render(request, 'shop/order.html',context)
+
+
+
+def shopDelete(request, shopId):
+    if request.method == 'GET':
+        return shop(request)
+    # POST
+    shopToDelete = get_object_or_404(Shop, id=shopId)
+    shopToDelete.delete()
+    return redirect('shop:shop')
+
+
+
+
 
 

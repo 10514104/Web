@@ -27,11 +27,37 @@
         {% for shop in shops %}
           <tr class="tr3">
             <td>{{shop.name}}</td>
-            <td>{{shop.price}}</td>
+            <td>NT${{shop.price}}</td>
             <td>{{shop.amount}}</td>
-            <td>{{shop.amount}} * {{shop.price}}</td>
+            <td>NT${{ sub.1 }}</td>
           </tr>
         {% endfor %}
+        
+      </table>
+      
+      <table id="tab11">
+      <tr class="tr4">
+          <td class="td1"></td>
+          <td class="td2">小計：</td>
+          <td class="td3"></td>
+          <td class="td4">NT${{ sub1 }}</td>
+        </tr>
+        <tr class="tr4">
+          <td class="td1"></td>
+          <td class="td2">運費：</td>
+          <td class="td3"></td>
+          <td class="td4">NT$60</td>
+        </tr>
+        <tr class="tr4">
+          <td class="td1"></td>
+          <td class="td2" id="td22" colspan="3"><hr></td>
+        </tr>
+        <tr class="tr4">
+          <td class="td1"></td>
+          <td class="td2">合計：</td>
+          <td class="td3"></td>
+          <td class="td4">NT${{ sub2 }}</td>
+        </tr>
       </table>
       
       <br><br>
@@ -41,8 +67,17 @@
         <tr class="tr12"><td class="td22">收件人名稱：{{ name }}</td></tr>
         <tr class="tr12"><td class="td22">收件人電話號碼：{{ phone }}</td></tr>
         <tr class="tr12"><td class="td22">地址：{{ address }}</td></tr>
-        <tr class="tr12"><td class="td22">送貨方式：{{ Delivery }}</td></tr>
-        <tr class="tr12"><td class="td22" id="td0">付款方式：{{ payment }}</td></tr>
+        <form method="get" action="{% url 'shop:checkout' %}">
+        <tr class="tr12"><td class="td22">送貨方式：
+        <select id="Delivery" name="Delivery">
+          <option value={{ Delivery }}>{{ Delivery }}</option>
+        </select>
+        </td></tr>
+        <tr class="tr12"><td class="td22" id="td0">付款方式：
+        <select id="payment" name="payment">
+          <option value={{ payment }}>{{ payment }}</option>
+        </select>
+        </td></tr>
       </table>
       
       <table id="tab3">
@@ -58,7 +93,8 @@
        <table id="tab44">
           <tr>
             <td id="td1">
-              <a class="btn" id="btn1" href="{% url 'shop:checkout' %}" >返回結帳</a>
+              <input class="btn fin" type="submit" value="返回結帳">
+              </form>
             </td>
             <td id="td2">
               <a class="btn fin" id="btn1" href="{% url 'main:main' %}" >確認提交</a>

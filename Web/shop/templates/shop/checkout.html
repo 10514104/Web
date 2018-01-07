@@ -27,9 +27,9 @@
         {% for shop in shops %}
           <tr class="tr3">
             <td>{{shop.name}}</td>
-            <td>{{shop.price}}</td>
+            <td>NT${{shop.price}}</td>
             <td>{{shop.amount}}</td>
-            <td>{{shop.amount}} * {{shop.price}}</td>
+            <td>NT${{ sub.1 }}</td>
           </tr>
         {% endfor %}
       </table>
@@ -104,7 +104,7 @@
         </tr>
         <tr class="tr22">
           <td>
-          <strong>合計:NT$????</strong>
+          <strong>合計:NT${{ sub2 }}</strong>
           <p>已選擇付款方式：
             <select id="payment" name="payment">
               <option value={{ payment }}>{{ payment }}</option>

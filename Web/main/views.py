@@ -20,6 +20,6 @@ def mainProduct(request, productId):
     #POST
     shopForm = ShopForm(request.POST)
     shopForm.save()
-    return redirect('main/mainProduct.html')
+    return redirect('main:main')
 
 
