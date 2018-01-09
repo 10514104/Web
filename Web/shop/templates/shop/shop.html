@@ -82,19 +82,36 @@
         </tr>
         <tr class="tr2">
             <td><p>運費</p></td>
-            <td><p>NT$60</p></td>
+            <td>
+            {% if sub1 > 0 %}
+              <p>NT$60</p>
+            {% else %}
+              <p>NT$0</p>
+            {% endif %}
+            </td>
         </tr>
         <tr class="tr2">
           <td colspan="2"><hr></td>
         <tr>
         <tr id="tr34" class="tr2">
             <td><p>合計</p></td>
-            <td><p>NT${{ sub2 }}</p></td>
+            <td>
+            {% if sub1 > 0 %}
+              <p>NT${{ sub2 }}</p>
+            {% else %}
+              <p>NT$0</p>
+            {% endif %}
+            </td>
         </tr>
         <tr class="tr2">
             <td colspan="2">
-            <input class="btn" type="submit" value="前往結帳">
-            </form>
+            {% if sub1 > 0 %}
+              <input class="btn" type="submit" value="前往結帳">
+              </form>
+            {% else %}
+              <p>您購物車內沒有商品可以結帳</p>
+            {% endif %}
+            
             </td>
         </tr>
       </table>

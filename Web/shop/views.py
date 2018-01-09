@@ -3,19 +3,19 @@ from django.shortcuts import render, redirect, get_object_or_404
 from product.models import Product
 from product.models import Shop
 
+
 # Create your views here.
 
 def shop(request):
     products = Product.objects.all()
     shops = Shop.objects.all()
-    sub = []
     sub1 = 0
+    sub = [0]
     for x in shops:
         a=x.price * x.amount
         sub1+=a
-        sub.append(a)
         print(a)
-    print(sub)
+        sub.append(a)
     print(sub1)
     sub2=sub1+60
     
