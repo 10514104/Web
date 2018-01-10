@@ -10,13 +10,11 @@ def shop(request):
     products = Product.objects.all()
     shops = Shop.objects.all()
     sub1 = 0
-    sub = [0]
+    sub = 0
     for x in shops:
         a=x.price * x.amount
         sub1+=a
         print(a)
-        sub.append(a)
-    print(sub1)
     sub2=sub1+60
     
     context = {'products':products,'shops':shops,
@@ -30,14 +28,12 @@ def checkout(request):
     payment = request.GET.get('payment')
     products = Product.objects.all()
     shops = Shop.objects.all()
-    sub = [0]
     sub1 = 0
+    sub = 0
     for x in shops:
         a=x.price * x.amount
-        sub.append(a)
-    print(sub)
-    for x in sub:
-        sub1+=x
+        sub1+=a
+        print(a)
     sub2=sub1+60
     context = {'products':products,'shops':shops,
                'payment':payment,'Delivery':Delivery,
@@ -55,14 +51,12 @@ def order(request):
     payment = request.GET.get('payment')
     products = Product.objects.all()
     shops = Shop.objects.all()
-    sub = [0]
     sub1 = 0
+    sub = 0
     for x in shops:
         a=x.price * x.amount
-        sub.append(a)
-    print(sub)
-    for x in sub:
-        sub1+=x
+        sub1+=a
+        print(a)
     sub2=sub1+60
     context = {'products':products,'shops':shops,'name':name
                ,'phone':phone,'address':address,'remark':remark

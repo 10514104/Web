@@ -29,7 +29,7 @@
             <td>{{shop.name}}</td>
             <td>NT${{shop.price}}</td>
             <td>{{shop.amount}}</td>
-            <td>NT${{ sub.1 }}</td>
+            <td>NT${%  widthratio shop.price 1 shop.amount %}</td>
           </tr>
         {% endfor %}
       </table>
