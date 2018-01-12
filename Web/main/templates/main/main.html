@@ -22,18 +22,9 @@
   
   <div id = "d4">
     <ul>
-      <li><a class="a1" href="{% url 'main:main' %}" >
-        <img src="{% static 'main/img/GLEN10.jpg' %}"  alt="GLEN"></a>
-      </li>
-      <li><a class="a1" href="{% url 'main:main' %}" >
-        <img src="{% static 'main/img/GLEN18.jpg' %}"  alt="GLEN"></a>
-      </li>
-      <li><a class="a1" href="{% url 'main:main' %}" >
-        <img src="{% static 'main/img/GLEN21.jpg' %}"  alt="GLEN"></a>
-      </li>
-      <li><a class="a1" href="{% url 'main:main' %}" >
-        <img src="{% static 'main/img/GLENX.jpg' %}"  alt="GLEN"></a>
-      </li>
+     {% for product in products %}
+        <li>{{ product.titleimg }}</a></li>
+      {% endfor %}
       <div style="clear: both;"></div>
     </ul>
     <br>

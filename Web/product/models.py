@@ -8,6 +8,10 @@ class Product(models.Model):
     price = models.IntegerField()#產品價格
     title = models.CharField(max_length=128, unique=True)#產品標題
     Introduction = models.TextField()#產品簡介
+    productimg = models.ImageField(height_field=500
+                                   , width_field=500, max_length=100)#產品圖片
+    titleimg = models.ImageField(height_field=375
+                                   , width_field=372, max_length=100)#標題圖片
     #品飲紀錄
     colour = models.CharField(max_length=128, unique=True)#色澤
     smell = models.TextField()#嗅覺

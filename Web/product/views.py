@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 
 from product.models import Product
-from django.contrib import messages
 from product.forms import ProductForm
 
 # Create your views here.
@@ -25,7 +24,6 @@ def product(request):
     if not productForm.is_valid():
         return render(request, template, {'productForm':productForm})
     productForm.save()
-    messages.success(request, '產品已新增')
     return redirect('main:main')
 
 

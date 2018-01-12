@@ -11,7 +11,7 @@
     {% include 'main/menu.html' %}
     <div id="d4">
     <p id="pp">新增產品</p>
-    <form method="post" action="{% url 'product:product' %}">
+    <form method="post" action="{% url 'product:product' %}" enctype="multipart/form-data">
       <table id="tb2">
         <tr id="tr11">
           <td>產品資料</td>

@@ -7,6 +7,9 @@ class ProductForm(forms.ModelForm):
     price = forms.IntegerField(label='價格')
     title = forms.CharField(label='產品標題',widget=forms.Textarea)#產品標題
     Introduction = forms.CharField(label='產品簡介',widget=forms.Textarea)#產品簡介
+    productimg = forms.FileField(label='產品圖像',required=False)
+    titleimg = forms.FileField(label='標題圖像',required=False)
+    
     #品飲紀錄
     colour = forms.CharField(label='色澤',widget=forms.Textarea)#色澤
     smell = forms.CharField(label='嗅覺',widget=forms.Textarea)#嗅覺
@@ -15,7 +18,7 @@ class ProductForm(forms.ModelForm):
     cask = forms.CharField(label='橡木桶資訊',widget=forms.Textarea)#橡木桶資訊
     class Meta:
         model = Product
-        fields = ['name', 'price','title', 'Introduction',
+        fields = ['name', 'price','title', 'Introduction','productimg','titleimg',
                   'colour', 'price','smell', 'taste','After', 'cask']
         
         

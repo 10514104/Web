@@ -1,7 +1,8 @@
-img#img1{
+div#dimg{
   float: left;
   margin:0.5em 3.5em 0 16% ;
   width:500px;
+  border:thin solid black;
 }
 div#d4 table#tab1{
   width:23em;
