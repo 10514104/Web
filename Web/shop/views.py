@@ -76,6 +76,24 @@ def shopDelete(request, shopId):
 
 
 
+def fin(request):
+    if request.method == 'GET':
+        return order(request)
+    # POST
+    shops = Shop.objects.all()
+    for x in shops:
+        x.delete()
+    return redirect('shop:fin2')
+
+
+
+def fin2(request):
+    products = Product.objects.all()
+    context = {'products':products }
+    return render(request, 'shop/fin.html',context)
+
+
+
 
 
 

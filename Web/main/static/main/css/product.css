@@ -1,5 +1,5 @@
 div#d4{
-  padding:0 25%;
+  padding:0 30%;
   margin:0;
   border: thin solid #FFFFFF;
 }
@@ -20,7 +20,6 @@ textarea{
   border-radius:5px;
 }
 div#d4 table#tb2{
-  /*border: thin solid red;*/
   width:100%;
 }
 div#d4 tr#tr11{

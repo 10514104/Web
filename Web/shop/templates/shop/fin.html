@@ -1,0 +1,36 @@
+<!doctype html>
+{% load staticfiles %}
+<html>
+  <head>
+    <title>結帳完成</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'main/css/fin.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+  </head>
+  <body>
+    {% include 'main/menu.html' %}
+    <div id="d33">
+    <p id="p1">您的訂單已確定提交，</p>
+    <p id="p2">我們將盡快為您處裡訂單。</p>
+    </div>
+    <div id = "d55">
+    
+    <br><br><br><br><br>
+    
+    <table>
+      <tr>
+        <td id="td1">"格蘭哥尼那天然的深赤褐色、紅銅色和淺淺的金黃色，<br>
+        是歲月和雪莉桶給我們最大的回報。"</td>
+        <td id="td2" rowspan="2">
+        <img src="{% static 'main/img/GLENX1.png' %}" alt="GLEN"></td>
+      </tr>
+      <tr>
+        <td id="td3">JOHN GLASS<br>首席調酒師</td>
+      </tr>
+     </table>
+     <br><br><br><br><br><br><br><br>
+     <a class="btn" href="{% url 'main:main' %}">返回購物頁面</a>
+     <br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+  </body>
+</html>

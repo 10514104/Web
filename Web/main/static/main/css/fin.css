@@ -1,0 +1,59 @@
+div#d33,div#d55{
+  width:100%;
+  margin:0;
+  background: url("../img/background.jpg") no-repeat center center fixed;
+  background-repeat:repeat;
+}
+                               /*------d33------*/
+div#d33{
+  text-align:center;
+  height:15em;
+  border-bottom:thin solid black;
+  border-top:thin solid #999999;
+}
+div#d33 p{
+  font-size:2em;
+}
+div#d33 p#p1{
+  margin:2em 0 0 0;
+}
+div#d33 p#p2{
+  margin:0;
+}
+
+                               /*------d33------*/
+div#d55{
+  padding:0 15% 0 15%;
+}
+div#d55 table{
+  width:100%;
+  margin:0;
+  padding:0;
+}
+div#d55 td{
+  margin:0;
+  padding:0;
+}
+div#d55 td#td1 {
+  width:60%;
+  font-size:1.5em;
+  text-align:center;
+  vertical-align:bottom;
+}
+div#d55 td#td3 {
+  width:60%;
+  padding:0 0 2em 0;
+  font-size:1.3em;
+  text-align:center;
+  color:#e6c289;
+}
+div#d55 a {
+  display:block;
+  margin:auto;
+  text-decoration: none;
+  color:black;
+  width:10em;
+}
+
+
+

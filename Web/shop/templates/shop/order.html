@@ -93,11 +93,14 @@
        <table id="tab44">
           <tr>
             <td id="td1">
-              <input class="btn fin" type="submit" value="返回結帳">
+              <input class="btn" type="submit" value="返回結帳">
               </form>
             </td>
             <td id="td2">
-              <a class="btn fin" id="btn1" href="{% url 'main:main' %}" >確認提交</a>
+            <form  method="post" action="{% url 'shop:fin' %}">
+              {% csrf_token %}
+              <input class="btn fin" id="btn1" type="submit" value="確認提交">
+            </form>
             </td>
           </tr>
        </table>

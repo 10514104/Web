@@ -51,7 +51,7 @@
         <form method="post" action="{% url 'main:mainProduct' product.id %}">
           {% csrf_token %}
           {{ shopForm.as_p }}
-          <input class="btn" type="submit" value="加入購物車">
+          <input class="btn" id="btn" type="submit" value="加入購物車">
         </form>
       </div>
       <div style="clear: both;"></div>
