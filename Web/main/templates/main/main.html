@@ -23,7 +23,9 @@
   <div id = "d4">
     <ul>
      {% for product in products %}
-        <li>{{ product.titleimg }}</a></li>
+      <li><a class="a1" href="{% url 'main:mainProduct' product.id %}" >
+        <img src="{% static 'main/img/格蘭哥尼10年.jpg' %}"  alt="GLEN"></a>
+      </li>
       {% endfor %}
       <div style="clear: both;"></div>
     </ul>
@@ -40,7 +42,8 @@
       <tr>
         <td id="td3">Robbie Hughes<br>酒廠經理</td>
       </tr>
-     </table><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     </table>
+     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
      
     </div>
     
