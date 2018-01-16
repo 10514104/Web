@@ -1,7 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 
-from product.models import Product
-from product.forms import ShopForm
+from product.models import Product,Shop
 
 
 def main(request):
@@ -14,12 +13,16 @@ def main(request):
 def mainProduct(request, productId):
     product = get_object_or_404(Product, id=productId)
     products = Product.objects.all()
-    context = {'products':products,'product':product,'shopForm':ShopForm()}
+    context = {'products':products,'product':product}
     if request.method == 'GET':
         return render(request, 'main/mainProduct.html',context)
     #POST
-    shopForm = ShopForm(request.POST)
-    shopForm.save()
+    amount = int(request.POST.get('amount'))
+    shop = Shop()
+    shop.name = product.name
+    shop.price = product.price
+    shop.amount = amount
+    shop.save()
     return redirect('main:main')
 
 

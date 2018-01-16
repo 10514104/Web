@@ -52,7 +52,9 @@
         <P id="p2">NT${{ product.price }}</P>
         <form method="post" action="{% url 'main:mainProduct' product.id %}">
           {% csrf_token %}
-          {{ shopForm.as_p }}
+          <p id="p3">數量</p>
+          <input id="amount" type="number" name=amount>
+          <br><br>
           <input class="btn" id="btn" type="submit" value="加入購物車">
         </form>
       </div>

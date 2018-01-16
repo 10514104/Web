@@ -23,9 +23,9 @@
   <div id = "d4">
     <ul>
      {% for product in products %}
-      <li><a class="a1" href="{% url 'main:mainProduct' product.id %}" >
-        <img src="{% static 'main/img/格蘭哥尼10年.jpg' %}"  alt="GLEN"></a>
-      </li>
+        <li><a class="a1" href="{% url 'main:mainProduct' product.id %}" >
+          <img src="{% static 'main/img/product.name.jpg' %}"  alt="GLEN"></a>
+        </li>
       {% endfor %}
       <div style="clear: both;"></div>
     </ul>

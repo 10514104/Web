@@ -43,3 +43,14 @@ div#dd p#p1{
 div#dd p#p2{
   font-size:1.7em;
 }
+div#dd p#p3{
+  font-size:1.7em;
+  margin:0 0 0 0;
+}
+div#dd input#amount{
+  border-radius:3px;
+  padding:3px 0;
+}
+
+
+
