@@ -19,7 +19,9 @@
     
     <div id= "d4">
       <div id="dimg">
-      <img id="dimg" src="{% static 'main/img/格蘭哥尼21年.png' %}"  alt="GLEN">
+        {% with 'main/img/'|add:product.name|add:'.png' as staticImage %}
+        <img id="dimg" src="{% static staticImage %}"  alt="GLEN"></a>
+        {% endwith %}
       </div>
       <table id = "tab1">
         <tr class = "tr1">

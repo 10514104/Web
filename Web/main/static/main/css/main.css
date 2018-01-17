@@ -142,10 +142,6 @@ div#d4 a.a1 {
 div#d4 a.a1 img{
   width:100%;
 }
-div#d4 a.a1 img:hover{
-  display:block;
-  box-shadow: inset 0 0 10px #ffffff;
-}
 div#d4 a.a1:hover {
   margin:0 0 0 0;
 }

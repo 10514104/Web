@@ -23,8 +23,11 @@
   <div id = "d4">
     <ul>
      {% for product in products %}
-        <li><a class="a1" href="{% url 'main:mainProduct' product.id %}" >
-          <img src="{% static 'main/img/product.name.jpg' %}"  alt="GLEN"></a>
+        <li>
+          <a class="a1" href="{% url 'main:mainProduct' product.id %}" >
+          {% with 'main/img/'|add:product.name|add:'.jpg' as staticImage %}
+          <img src="{% static staticImage %}"  alt="GLEN"></a>
+           {% endwith %}
         </li>
       {% endfor %}
       <div style="clear: both;"></div>
