@@ -4,10 +4,10 @@ div#d4{
   border: thin solid #FFFFFF;
 }
 div#d4 p#pp{
-  font-size:2em;
+  font-size:1.5em;
 }
 label{
-  font-size:1.5em;
+  font-size:1.3em;
 }
 input{
   width:30em;
@@ -24,7 +24,7 @@ div#d4 table#tb2{
 }
 div#d4 tr#tr11{
   background-color:#c3c3c3;
-  font-size:2em;
+  font-size:1.5em;
 }
 div#d4 tr#tr11 td{
   padding:0.5em 0;

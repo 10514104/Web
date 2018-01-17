@@ -1,12 +1,12 @@
 img#dimg{
   float: left;
-  margin:0.5em 3.5em 0 16% ;
+  margin:0.5em 3.5em 0 11% ;
   width:500px;
   border:thin solid black;
 }
 div#d4 table#tab1{
   width:23em;
-  font-size:1.5em;
+  font-size:1.3em;
   margin:0 3.5em 0 0 ;
   min-width:20em;
   float: left;
@@ -38,13 +38,13 @@ div#dd{
 
 div#dd p#p1{
   margin-top:5px;
-  font-size:2.5em;
+  font-size:2em;
 }
 div#dd p#p2{
-  font-size:1.7em;
+  font-size:1.3em;
 }
 div#dd p#p3{
-  font-size:1.7em;
+  font-size:1.3em;
   margin:0 0 0 0;
 }
 div#dd input#amount{

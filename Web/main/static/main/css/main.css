@@ -41,23 +41,23 @@ div#d1 li#l2{
   min-width:30em;
   height:96px;
   text-align:center;
-  padding:1.1em 0 0 0;
+  padding:0.8em 0 0 0;
 }
 div#d1 li#l3{
   width:20%;
   min-width:11em;
   text-align:right;
-  padding:2em 0 0 0;
+  padding:1em 0 0 0;
 }
 div#d1 a{
   text-decoration: none;
   color: black;
 }
 div#d1 a#a2{
-  font-size: 3.6em;
+  font-size: 3em;
 }
 div#d1 a#a3,a#a4{
-  font-size:1.7em;
+  font-size:1.5em;
 }
  
 
@@ -85,7 +85,7 @@ div#d2 a {
   height:100%;
   text-decoration: none;
   color: #FFFFFF;
-  font-size: 2em;
+  font-size: 1.5em;
   text-align:center;
   margin:0;
 }
@@ -99,13 +99,13 @@ div#d2 a:hover {
 
 div#d3 p{
   text-align:center;
-  font-size:1.5em;
+  font-size:1.3em;
   margin:0.4em 0 0 0;
 }
 div#d3 p#p1{
   color:#AB8E4F;
   text-align:center;
-  font-size:3em;
+  font-size:2.5em;
   margin:0.4em 0 0 0;
 }
 div#d3 hr{
@@ -164,7 +164,7 @@ div#d5 td{
 }
 div#d5 td#td1 {
   width:60%;
-  font-size:1.5em;
+  font-size:1.3em;
   text-align:center;
   vertical-align:bottom;
 }
@@ -179,7 +179,7 @@ div#d5 td#td3 {
 .btn{
   box-shadow:none;
   border: thin solid black;
-  font-size:2em;
+  font-size:1.5em;
   text-align:center !important;
   border-radius: 5px;
   padding:0.5em 1.5em;

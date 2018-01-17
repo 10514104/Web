@@ -12,7 +12,7 @@ div#d4 table#tab1{
 }
 table#tab1 tr.tr1 td{
   text-align:center;
-  font-size:1.7em;
+  font-size:1.5em;
   background-color:#e1dede;
   padding:0.5em 0;
   border-top: thin solid #999999;
@@ -20,7 +20,7 @@ table#tab1 tr.tr1 td{
 }
 table#tab1 tr.tr2 td{
   width:20%;
-  font-size:1.3em;
+  font-size:1.1em;
   text-align:center;
   padding:0.4em 2em;
   border-bottom: thin solid #cccccc;
@@ -32,7 +32,7 @@ table#tab1 tr.tr2 td:last-child{
 }
 table#tab1 tr.tr3 td{
   width:20%;
-  font-size:1.3em;
+  font-size:1.1em;
   text-align:center;
   padding:1em 2em;
   border-bottom: thin solid #cccccc;
@@ -51,13 +51,13 @@ div#d4 table#tab2{
   margin-right:10%;
 }
 table#tab2 tr.tr1 td{
-  font-size:1.7em;
+  font-size:1.5em;
   background-color:#b0b0b0;
   padding:0.5em 1em;
   border-bottom: thin solid #333333;
 }
 table#tab2 tr.tr2 td{
-  font-size:1.3em;
+  font-size:1.1em;
   padding:0.4em 1em;
   /*border-bottom: thin solid #cccccc;*/
   background-color:#FFFFFF;
@@ -78,13 +78,13 @@ div#d4 table#tab3{
   background-color:#FFFFFF;
 }
 table#tab3 tr.tr1 td{
-  font-size:1.7em;
+  font-size:1.5em;
   background-color:#b0b0b0;
   padding:0.5em 1em;
   border-bottom: thin solid #333333;
 }
 table#tab3 tr.tr2 td{
-  font-size:1.3em;
+  font-size:1.1em;
   padding:0.3em 1em 0 1.3em;
   background-color:#FFFFFF;
 }
@@ -100,6 +100,6 @@ table#tab3 tr#tr34 td{
 .btn{
   display:block !important;
   margin:auto !important;
-  font-size:1.4em !important;
+  font-size:1.2em !important;
   padding:0.4em 1.5em !important;
 }

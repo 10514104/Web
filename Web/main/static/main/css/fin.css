@@ -12,7 +12,7 @@ div#d33{
   border-top:thin solid #999999;
 }
 div#d33 p{
-  font-size:2em;
+  font-size:1.8em;
 }
 div#d33 p#p1{
   margin:2em 0 0 0;
@@ -21,7 +21,7 @@ div#d33 p#p2{
   margin:0;
 }
 
-                               /*------d33------*/
+                               /*------d55------*/
 div#d55{
   padding:0 15% 0 15%;
 }
@@ -36,14 +36,14 @@ div#d55 td{
 }
 div#d55 td#td1 {
   width:60%;
-  font-size:1.5em;
+  font-size:1.3em;
   text-align:center;
   vertical-align:bottom;
 }
 div#d55 td#td3 {
   width:60%;
   padding:0 0 2em 0;
-  font-size:1.3em;
+  font-size:1.1em;
   text-align:center;
   color:#e6c289;
 }

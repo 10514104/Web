@@ -11,7 +11,7 @@ div#d4 table#tab1{
 }
 table#tab1 tr.tr1 td{
   text-align:center;
-  font-size:1.7em;
+  font-size:1.5em;
   background-color:#e1dede;
   padding:0.5em 0;
   border-top: thin solid #999999;
@@ -19,7 +19,7 @@ table#tab1 tr.tr1 td{
 }
 table#tab1 tr.tr2 td{
   width:25%;
-  font-size:1.3em;
+  font-size:1.1em;
   text-align:center;
   padding:0.4em 2em;
   border-bottom: thin solid #cccccc;
@@ -31,7 +31,7 @@ table#tab1 tr.tr2 td:last-child{
 }
 table#tab1 tr.tr3 td{
   width:25%;
-  font-size:1.3em;
+  font-size:1.1em;
   text-align:center;
   padding:1em 2em;
   border-bottom: thin solid #cccccc;
@@ -69,23 +69,23 @@ table#tab11 tr:last-child{
   font-weight: bold;
 }
 table#tab11 td{
-  font-size:1.3em;
+  font-size:1.1em;
   padding:0.5em 0;
 }
 
 
 table td.td11{
-  font-size:1.7em;
+  font-size:1.5em;
   background-color:#b0b0b0;
   padding:0.5em 1em;
   border-bottom: thin solid #333333;
 }
 table td.td22{
-  font-size:1.4em;
+  font-size:1.2em;
   padding:0.4em 1em;
 }
 table#tab2 td.td22{
-  font-size:1.4em;
+  font-size:1.2em;
   padding:0.4em 1em;
   border-bottom: thin solid #999999;
 }
@@ -115,7 +115,7 @@ table#tab3{
 }
 table#tab3 td textarea{
   width:100%;
-  height:13.2em;
+  height:15.2em;
   border-radius: 3px;
 }
 
