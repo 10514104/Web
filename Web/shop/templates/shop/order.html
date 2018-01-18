@@ -69,14 +69,12 @@
         <tr class="tr12"><td class="td22">地址：{{ address }}</td></tr>
         <form method="get" action="{% url 'shop:checkout' %}">
         <tr class="tr12"><td class="td22">送貨方式：
-        <select id="Delivery" name="Delivery">
-          <option value={{ Delivery }}>{{ Delivery }}</option>
-        </select>
+       {{ Delivery }}
+        <input type="hidden" name="Delivery" value={{ Delivery }}>
         </td></tr>
         <tr class="tr12"><td class="td22" id="td0">付款方式：
-        <select id="payment" name="payment">
-          <option value={{ payment }}>{{ payment }}</option>
-        </select>
+        {{ payment }}
+        <input type="hidden" name="payment" value={{ payment }}>
         </td></tr>
       </table>
       
@@ -84,7 +82,7 @@
         <tr class="tr11"><td class="td11">訂單備註</td></tr>
         <tr class="tr12">
         <td class="td22">
-        <textarea rows=7 cols=20 name="remark">{{ remark }}</textarea>
+        <textarea name="remark">{{ remark }}</textarea>
         </td></tr>
       </table>
       
@@ -99,7 +97,7 @@
             <td id="td2">
             <form  method="post" action="{% url 'shop:fin' %}">
               {% csrf_token %}
-              <input class="btn fin" id="btn1" type="submit" value="確認提交">
+              <input class="btn deleteConfirm" id="btn1" type="submit" value="確認提交">
             </form>
             </td>
           </tr>
@@ -108,6 +106,6 @@
     </div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src={% static 'main/js/fin.js' %}></script>
+    <script src={% static 'main/js/deleteConfirm.js' %}></script>
   </body>
 </html>

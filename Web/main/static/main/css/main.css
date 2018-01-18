@@ -193,3 +193,11 @@ img#shop{
   display:block;
   margin:auto;
 }
+
+.success {
+  width:10em;
+  text-align:center;
+  font-size:1.8em;
+  background-color:#cab78f;
+  box-shadow: inset 0 0 20px #ffffff;  
+}

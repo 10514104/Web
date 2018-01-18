@@ -67,9 +67,8 @@
           <td id="td2">
           <form method="get" action="{% url 'shop:order' %}">
             已選擇送貨方式：
-              <select id="Delivery" name="Delivery">
-                <option value={{ Delivery }}>{{ Delivery }}</option>
-              </select>
+              {{ Delivery }}
+              <input type="hidden" name="Delivery" value={{ Delivery }}>
             
               {% csrf_token %}
               <p>收件人名稱</p>
@@ -106,9 +105,8 @@
           <td>
           <strong>合計:NT${{ sub2 }}</strong>
           <p>已選擇付款方式：
-            <select id="payment" name="payment">
-              <option value={{ payment }}>{{ payment }}</option>
-            </select>
+            {{ payment }}
+            <input type="hidden" name="payment" value={{ payment }}>
           </p>
           <br><br>
           </td>
