@@ -20,6 +20,7 @@ def product(request):
         return render(request,template,context)
     # POST
     name = request.POST.get('name')
+    ename = request.POST.get('ename')
     price = int(request.POST.get('price'))
     title = request.POST.get('title')
     Introduction = request.POST.get('Introduction')
@@ -31,6 +32,7 @@ def product(request):
     
     product = Product()
     product.name=name
+    product.ename=ename
     product.price=price
     product.title=title
     product.Introduction=Introduction
